@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useFetchTransactions } from '@/hooks/useFetchTransactions';
 import { useDebounce } from '@/hooks/useDebounce';
 import Box from './shared/ui/Box';
-import { SearchInput } from './shared/ui/Search-bar';
+import TransactionHeader from './features/transactions/components/TransactionHeader';
 
 const App = () => {
   const [searchText, setSearchText] = useState('');
@@ -12,12 +12,11 @@ const App = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <Box className="p-6">
-        <SearchInput
-          value={searchText}
-          onChange={setSearchText}
-          placeholder="Search"
+        <TransactionHeader
+          searchText={searchText}
+          onSearchChange={setSearchText}
           isLoading={isLoading}
-        ></SearchInput>
+        />
 
         {isLoading ? (
           <div>{'Loading...'}</div>
