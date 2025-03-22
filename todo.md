@@ -8,4 +8,6 @@
 - [x] Add git ci workflow
 - [x] config alias
 - [x] setup env & axios
-- [ ] Add service folder // upgrade the fetch call // configure axios & env variable
+- [x] Add service folder // upgrade the fetch call // configure axios & env variable
+- [x] Fix multi call onchange
+- [ ] Create TransactionItem

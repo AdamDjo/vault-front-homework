@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import TextInput from '@/shared/ui/TextInput';
-import { useFetchTransactions } from './hooks/useFetchTransactions';
+import { useFetchTransactions } from '@/hooks/useFetchTransactions';
+import { useDebounce } from '@/hooks/useDebounce';
 
 const App = () => {
   const [searchText, setSearchText] = useState('');
-  const { isLoading, results } = useFetchTransactions(searchText);
+  const debouncedText = useDebounce(searchText, 500);
+  const { isLoading, results } = useFetchTransactions(debouncedText);
 
   return (
     <div>
