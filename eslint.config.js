@@ -25,11 +25,6 @@ export default [
         navigator: 'readonly',
       },
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
@@ -41,6 +36,17 @@ export default [
       'no-unused-vars': 'warn',
       'no-undef': 'warn',
       'no-console': 'warn',
+    },
+
+    settings: {
+      react: {
+        version: 'detect',
+      },
+      'import/resolver': {
+        typescript: {
+          project: './tsconfig.json',
+        },
+      },
     },
   },
   prettier,
