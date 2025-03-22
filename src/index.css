@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -15,9 +16,21 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+    
   }
+  :root {
+    /* Focus */
+    --brand-primary: #D4A0FF;
+    --text-placeholder: #6A6A6A;
+     /* Colors */
+     --color-text-primary: #000000;
+     --color-text-subdued: #6A6A6A;
+  }
+
 }
 
+
 body {
-  @apply p-16;
+  font-family: 'Inter', sans-serif;
+  @apply  h-full bg-gray-50;
 }
