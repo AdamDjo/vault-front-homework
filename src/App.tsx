@@ -3,6 +3,7 @@ import { useFetchTransactions } from '@/hooks/useFetchTransactions';
 import { useDebounce } from '@/hooks/useDebounce';
 import Box from './shared/ui/Box';
 import TransactionHeader from './features/transactions/components/TransactionHeader';
+import TransactionItem from './shared/ui/TransactionItem';
 
 const App = () => {
   const [searchText, setSearchText] = useState('');
@@ -24,9 +25,10 @@ const App = () => {
           <div>
             {results.map((r, index) => (
               // TODO we must finalize this integration!! not very pretty like this
-              <div className="border border-dashed" key={index}>
-                {JSON.stringify(r)}
-              </div>
+              // <div className="border border-dashed" key={index}>
+              //   {JSON.stringify(r)}
+              // </div>
+              <TransactionItem key={index}></TransactionItem>
             ))}
           </div>
         ) : null}
