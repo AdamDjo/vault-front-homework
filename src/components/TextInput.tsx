@@ -2,13 +2,13 @@ import {
   ChangeEventHandler,
   DetailedHTMLProps,
   InputHTMLAttributes,
-} from "react";
+} from 'react';
 
 type Props = Omit<
   DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
-  "onChange"
+  'onChange'
 > & {
-  onChange: (value: string) => void;
+  onChange: (_value: string) => void;
 };
 
 const TextInput = (props: Props) => {
