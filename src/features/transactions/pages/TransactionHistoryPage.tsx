@@ -11,13 +11,10 @@ import clsx from 'clsx';
 const TransactionHistoryPage = () => {
   const [searchText, setSearchText] = useState('');
   const debouncedText = useDebounce(searchText, 500);
-  const { isLoading, results } = useFetchTransactions(debouncedText);
+  const { isLoading, results, error } = useFetchTransactions(debouncedText);
 
-  const showList = !isLoading && results && results.length > 0;
-  const showEmptyBox =
-    !isLoading && searchText === '' && (!results || results.length === 0);
-  const showNoResult =
-    !isLoading && searchText !== '' && (!results || results.length === 0);
+  const hasResults = results && results.length > 0;
+  const isSearchActive = searchText !== '';
 
   return (
     <Section className="min-h-screen flex items-center justify-center">
@@ -31,20 +28,21 @@ const TransactionHistoryPage = () => {
           onSearchChange={setSearchText}
           isLoading={isLoading}
         />
-        {/* Loader state */}
-        {isLoading && <Box className="h-[400px]"></Box>}
+        <Box className="relative overflow-y-auto gap-3 flex flex-col h-[400px] no-scrollbar">
+          {/* If we have transactions: display the list */}
+          {!isLoading && hasResults && (
+            <TransactionList transactions={results} />
+          )}
 
-        {/* Show all or filtered transactions */}
-        {showList && <TransactionList transactions={results} />}
-
-        {/* No search yet & no initial data */}
-        {showEmptyBox && <Box className="h-[400px]"></Box>}
-
-        {/* Search performed but no matches */}
-        {showNoResult && <NoResult />}
+          {/* If search is active but no match: show no result feedback */}
+          {!isLoading && !hasResults && !error && isSearchActive && (
+            <NoResult />
+          )}
+          {/* If API error: fallback to no result */}
+          {!isLoading && error && !hasResults && <NoResult />}
+        </Box>
       </Box>
     </Section>
   );
 };
-
 export default TransactionHistoryPage;

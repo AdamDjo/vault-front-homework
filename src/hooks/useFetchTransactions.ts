@@ -5,16 +5,19 @@ import { wsSearchTransactions } from '@/services/transactions/wsSearchTransactio
 export const useFetchTransactions = (query: string) => {
   const [isLoading, setLoading] = useState(false);
   const [results, setResults] = useState<null | Transaction[]>(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      setError(false);
       try {
         const data = await wsSearchTransactions(query);
         setResults(data);
       } catch (err) {
         console.error('Error fetching transactions:', err);
         setResults([]);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -22,5 +25,5 @@ export const useFetchTransactions = (query: string) => {
     fetchData();
   }, [query]);
 
-  return { isLoading, results };
+  return { isLoading, results, error };
 };
