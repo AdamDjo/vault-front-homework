@@ -13,4 +13,4 @@
 - [x] create input search
 - [x] create header
 - [x] Create TransactionItem
-- [ ] Make TransactionItem Dynamique
+- [ ] Make TransactionItem title subtitle dynamique

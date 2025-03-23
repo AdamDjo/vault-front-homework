@@ -1,8 +1,9 @@
-// src/features/transactions/components/TransactionItem.tsx
-
 import { ArrowDownLeft, Bitcoin } from 'lucide-react';
+import { TransactionUIProps } from '@/features/transactions/types/TransactionUI.types';
 
-const TransactionItem = () => {
+type Props = TransactionUIProps;
+
+const TransactionItem = ({ title, subtitle }: Props) => {
   return (
     <div className="flex   w-full p-3 rounded-xl  gap-1 border-1 border-[#E8E8E8]">
       {/* Left section */}
@@ -29,14 +30,12 @@ const TransactionItem = () => {
       {/* Right section */}
       <div className="flex flex-col gap-1  w-full">
         <div className="flex justify-between">
-          <span className="text-base font-semibold text-black">Received</span>
+          <span className="text-base font-semibold text-black">{title}</span>
 
           <span className="text-base font-semibold text-black">55 BTC</span>
         </div>
         <div className="">
-          <span className="text-sm font-medium text-[#6A6A6A]">
-            From bc1qymz7...vgk3kvtl
-          </span>
+          <span className="text-sm font-medium text-[#6A6A6A]">{subtitle}</span>
         </div>
       </div>
     </div>
