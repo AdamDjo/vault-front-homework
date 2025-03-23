@@ -14,7 +14,7 @@ const TransactionHistoryPage = () => {
 
   return (
     <Section className="min-h-screen flex items-center justify-center justify-c">
-      <Box className="rounded-3xl  p-6 pb-0 sm:w-lg bg-white shadow  relative  max-w-[440px]">
+      <Box className="rounded-3xl p-6 pb-0 sm:w-lg max-w-[440px] bg-white border border-[#E8E8E8] shadow-[0_0_4px_rgba(0,0,0,0.04)] relative">
         <TransactionHeader
           searchText={searchText}
           onSearchChange={setSearchText}

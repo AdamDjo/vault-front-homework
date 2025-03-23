@@ -16,7 +16,7 @@ const TransactionList = ({ transactions }: Props) => {
           return <TransactionItem key={transaction.id} {...mappedProps} />;
         })}
       </Box>
-      <div className="pointer-events-none absolute bottom-0 rounded-4xl left-0 right-0 h-30 bg-gradient-to-t from-white to-white/0"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none bg-gradient-to-t from-[rgba(255,255,255,0.9)] to-[rgba(255,255,255,0)] z-20 rounded-3xl"></div>
     </>
   );
 };
