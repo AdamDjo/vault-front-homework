@@ -19,7 +19,7 @@
 - [x] add Transaction List
 - [x] fix bug fetching if no query
 - [x] add not found section
-- [ ] add big container
+- [x] add big container
 - [ ] fix design errors
 - [ ] fix responsive
 - [ ] Add unit tests

@@ -12,4 +12,5 @@ export type Transaction = {
     currency?: string;
   };
 };
+// types/CryptoUnit.types.ts
 export type CryptoUnit = 'BTC' | 'ETH' | 'SOL' | 'XRP' | 'DEFAULT';

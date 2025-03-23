@@ -4,6 +4,6 @@ type SectionProps = {
 };
 
 const Section = ({ children, className = '' }: SectionProps) => (
-  <section className={`w-full ${className}`}>{children}</section>
+  <section className={` ${className}`}>{children}</section>
 );
 export default Section;
