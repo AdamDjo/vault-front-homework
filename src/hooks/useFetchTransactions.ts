@@ -19,12 +19,7 @@ export const useFetchTransactions = (query: string) => {
         setLoading(false);
       }
     };
-
-    if (query) {
-      fetchData();
-    } else {
-      setResults(null);
-    }
+    fetchData();
   }, [query]);
 
   return { isLoading, results };
