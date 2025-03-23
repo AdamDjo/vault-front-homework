@@ -1,9 +1,16 @@
-import { ArrowDownLeft, Bitcoin } from 'lucide-react';
 import { TransactionUIProps } from '@/features/transactions/types/TransactionUI.types';
 
 type Props = TransactionUIProps;
 
-const TransactionItem = ({ title, subtitle, amount }: Props) => {
+const TransactionItem = ({
+  CryptoIcon,
+  gradient,
+  title,
+  subtitle,
+  amount,
+  overlayIcon,
+  overlayColor,
+}: Props) => {
   return (
     <div className="flex   w-full p-3 rounded-xl  gap-1 border-1 border-[#E8E8E8]">
       {/* Left section */}
@@ -14,15 +21,17 @@ const TransactionItem = ({ title, subtitle, amount }: Props) => {
           <div
             className="h-10 w-10 rounded-full flex items-center justify-center"
             style={{
-              background: 'linear-gradient(135deg, #F7931A 0%, #F7931A 100%)',
+              background: gradient,
             }}
           >
-            <Bitcoin className="text-white w-4 h-4" />
+            <CryptoIcon className="text-white w-4 h-4" />
           </div>
 
           {/* Overlay icon */}
-          <div className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-green-600 flex items-center justify-center border border-white">
-            <ArrowDownLeft className="h-3 w-3 text-white" />
+          <div
+            className={`absolute -top-1 -right-1 h-5 w-5 rounded-full flex items-center justify-center border border-white ${overlayColor}`}
+          >
+            {overlayIcon}
           </div>
         </div>
       </div>
