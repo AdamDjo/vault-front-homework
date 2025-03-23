@@ -5,7 +5,10 @@ export type TransactionUIProps = {
   subtitle: string;
   amount: string | null;
   CryptoIcon: React.ElementType;
-  gradient: string;
+  gradient: {
+    from: string;
+    to: string;
+  };
   overlayIcon: ReactNode;
   overlayColor: string;
 };

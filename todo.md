@@ -20,6 +20,8 @@
 - [x] fix bug fetching if no query
 - [x] add not found section
 - [x] add big container
-- [ ] fix design errors
+- [x] fix design errors
 - [ ] fix responsive
+- [ ] Add images
+
 - [ ] Add unit tests

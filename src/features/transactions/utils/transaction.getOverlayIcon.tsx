@@ -5,17 +5,17 @@ export const getOverlayIcon = (type: Transaction['type']) => {
   switch (type) {
     case 'TRANSACTION_RECEIVED':
       return {
-        icon: <ArrowDown className="h-5 w-5 text-white" />,
+        icon: <ArrowDown className="h-4 w-4 text-white" />,
         color: 'bg-[#47883A]',
       };
     case 'TRANSACTION_SENT':
       return {
-        icon: <ArrowUp className="h-5 w-5 text-white" />,
+        icon: <ArrowUp className="h-4 w-4 text-white" />,
         color: 'bg-[#949494]',
       };
     case 'ACCOUNT_CREATED':
       return {
-        icon: <Plus className="h-5 w-5 text-white" />,
+        icon: <Plus className="h-4 w-4 text-white" />,
         color: 'bg-[#47883A]',
       };
     default:

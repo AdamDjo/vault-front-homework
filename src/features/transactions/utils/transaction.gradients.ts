@@ -1,14 +1,16 @@
 import { CryptoUnit } from '@/types/transaction.types';
 
-const GRADIENTS: Record<CryptoUnit, string> = {
-  BTC: 'linear-gradient(135deg, #F7931A 0%, #F7931A 100%)',
-  ETH: 'linear-gradient(135deg, #627EEA 0%, #627EEA 100%)',
-  SOL: 'linear-gradient(135deg, #9945FF 0%, #14F195 100%)',
-  XRP: 'linear-gradient(135deg, #00AAE4 0%, #00AAE4 100%)',
-  DEFAULT: 'linear-gradient(135deg, #CCCCCC 0%, #CCCCCC 100%)',
+const GRADIENTS: Record<CryptoUnit, { from: string; to: string }> = {
+  BTC: { from: '#F7931A', to: '#F7931A' },
+  ETH: { from: '#627EEA', to: '#627EEA' },
+  SOL: { from: '#9945FF', to: '#14F195' },
+  XRP: { from: '#00AAE4', to: '#00AAE4' },
+  DEFAULT: { from: '#F7931A', to: '#F7931A' },
 };
 
-export const getCryptoGradient = (unit: string | undefined): string => {
+export const getCryptoGradient = (
+  unit: string | undefined
+): { from: string; to: string } => {
   const safeUnit = (unit as CryptoUnit) || 'DEFAULT';
   return GRADIENTS[safeUnit] ?? GRADIENTS.DEFAULT;
 };

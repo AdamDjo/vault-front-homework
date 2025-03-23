@@ -13,8 +13,8 @@ const TransactionHistoryPage = () => {
   const { isLoading, results } = useFetchTransactions(debouncedText);
 
   return (
-    <Section className="min-h-screen flex items-center justify-center">
-      <Box>
+    <Section className="min-h-screen flex items-center justify-center justify-c">
+      <Box className="rounded-3xl  p-6 pb-0 sm:w-lg bg-white shadow  relative  max-w-[440px]">
         <TransactionHeader
           searchText={searchText}
           onSearchChange={setSearchText}

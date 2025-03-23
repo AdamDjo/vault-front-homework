@@ -6,7 +6,7 @@ const ICONS_MAP: Record<CryptoUnit, LucideIcon> = {
   ETH: DollarSign,
   SOL: DollarSign,
   XRP: DollarSign,
-  DEFAULT: DollarSign,
+  DEFAULT: Bitcoin,
 };
 
 export const getCryptoIcon = (unit: string | undefined): LucideIcon => {

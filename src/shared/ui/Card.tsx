@@ -4,6 +4,6 @@ type CardProps = {
 };
 
 const Card = ({ children, className = '' }: CardProps) => (
-  <section className={` ${className}`}>{children}</section>
+  <div className={` ${className}`}>{children}</div>
 );
 export default Card;
