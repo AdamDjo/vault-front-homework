@@ -15,4 +15,11 @@
 - [x] Create TransactionItem
 - [x] Make TransactionItem title subtitle dynamique
 - [x] Add Amount
-- [ ] add icon & bg
+- [x] add icon & bg
+- [x] add Transaction List
+- [ ] fix bug fetching if no query
+- [ ] add not found section
+- [ ] add big container
+- [ ] fix design errors
+- [ ] fix responsive
+- [ ] Add unit tests
