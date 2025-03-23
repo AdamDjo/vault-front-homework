@@ -36,7 +36,10 @@ export const SearchInput = ({
 
       {/* Right icon */}
       {isLoading && (
-        <Loader2 className="h-5 w-5 text-[var(--brand-primary)] animate-spin" />
+        <Loader2
+          role="status"
+          className="h-5 w-5 text-[var(--brand-primary)] animate-spin"
+        />
       )}
     </div>
   );
