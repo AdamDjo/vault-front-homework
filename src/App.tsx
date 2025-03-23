@@ -3,7 +3,8 @@ import { useFetchTransactions } from '@/hooks/useFetchTransactions';
 import { useDebounce } from '@/hooks/useDebounce';
 import Box from '@/shared/ui/Box';
 import TransactionHeader from '@/features/transactions/components/TransactionHeader';
-import TransactionList from './features/transactions/components/TransactionList';
+import TransactionList from '@/features/transactions/components/TransactionList';
+import NoResult from '@/features/transactions/pages/NoResult';
 
 const App = () => {
   const [searchText, setSearchText] = useState('');
@@ -19,11 +20,11 @@ const App = () => {
           isLoading={isLoading}
         />
 
-        {isLoading ? (
-          <div>{'Loading...'}</div>
-        ) : results ? (
+        {results && results.length > 0 ? (
           <TransactionList transactions={results} />
-        ) : null}
+        ) : (
+          <NoResult />
+        )}
       </Box>
     </div>
   );

@@ -17,8 +17,8 @@
 - [x] Add Amount
 - [x] add icon & bg
 - [x] add Transaction List
-- [ ] fix bug fetching if no query
-- [ ] add not found section
+- [x] fix bug fetching if no query
+- [x] add not found section
 - [ ] add big container
 - [ ] fix design errors
 - [ ] fix responsive
