@@ -1,6 +1,6 @@
 import React from 'react';
 type BoxProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 };
 

@@ -3,7 +3,7 @@ import NotFoundImage from '@/assets/images/notfound.png';
 
 const NoResult = () => {
   return (
-    <Box className="flex flex-col h-[380px] items-center flex-1 justify-center gap-4  text-center ">
+    <Box className="flex flex-col h-[400px] items-center flex-1 justify-center gap-4  text-center ">
       <img
         src={NotFoundImage}
         alt="No result found"

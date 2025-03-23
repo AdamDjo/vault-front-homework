@@ -1,6 +1,6 @@
 import { SearchInput } from '@/shared/ui/Search-bar';
 
-type Props = {
+type TransactionHeaderProps = {
   searchText: string;
   onSearchChange: (value: string) => void;
   isLoading?: boolean;
@@ -10,7 +10,7 @@ const TransactionHeader = ({
   searchText,
   onSearchChange,
   isLoading = false,
-}: Props) => {
+}: TransactionHeaderProps) => {
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-2xl font-semibold text-black">History</h1>
