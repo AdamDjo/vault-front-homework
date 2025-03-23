@@ -1,5 +1,3 @@
-// src/features/transactions/components/TransactionHeader.tsx
-
 import { SearchInput } from '@/shared/ui/Search-bar';
 
 type Props = {

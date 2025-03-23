@@ -1,7 +1,7 @@
 import { Search, Loader2 } from 'lucide-react';
 import clsx from 'clsx';
 
-type Props = {
+type SearchBarProps = {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
@@ -13,7 +13,7 @@ export const SearchInput = ({
   onChange,
   placeholder = 'Search',
   isLoading = false,
-}: Props) => {
+}: SearchBarProps) => {
   return (
     <div
       className={clsx(

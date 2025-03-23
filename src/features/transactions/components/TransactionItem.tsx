@@ -1,4 +1,5 @@
 import { TransactionUIProps } from '@/features/transactions/types/TransactionUI.types';
+import Card from '@/shared/ui/Card';
 
 type Props = TransactionUIProps;
 
@@ -12,7 +13,7 @@ const TransactionItem = ({
   overlayColor,
 }: Props) => {
   return (
-    <div className="flex   w-full p-3 rounded-xl  gap-1 border-1 border-[#E8E8E8]">
+    <Card className="flex   w-full p-3 rounded-xl  gap-1 border-1 border-[#E8E8E8]">
       {/* Left section */}
       <div className="flex  items-center ">
         {/* Crypto Icon */}
@@ -48,7 +49,7 @@ const TransactionItem = ({
           <span className="text-sm font-medium text-[#6A6A6A]">{subtitle}</span>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
