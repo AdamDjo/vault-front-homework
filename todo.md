@@ -13,4 +13,6 @@
 - [x] create input search
 - [x] create header
 - [x] Create TransactionItem
-- [ ] Make TransactionItem title subtitle dynamique
+- [x] Make TransactionItem title subtitle dynamique
+- [x] Add Amount
+- [ ] add icon & bg

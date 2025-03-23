@@ -3,7 +3,7 @@ import { TransactionUIProps } from '@/features/transactions/types/TransactionUI.
 
 type Props = TransactionUIProps;
 
-const TransactionItem = ({ title, subtitle }: Props) => {
+const TransactionItem = ({ title, subtitle, amount }: Props) => {
   return (
     <div className="flex   w-full p-3 rounded-xl  gap-1 border-1 border-[#E8E8E8]">
       {/* Left section */}
@@ -31,10 +31,11 @@ const TransactionItem = ({ title, subtitle }: Props) => {
       <div className="flex flex-col gap-1  w-full">
         <div className="flex justify-between">
           <span className="text-base font-semibold text-black">{title}</span>
-
-          <span className="text-base font-semibold text-black">55 BTC</span>
+          {amount && (
+            <span className="text-base font-semibold text-black">{amount}</span>
+          )}
         </div>
-        <div className="">
+        <div>
           <span className="text-sm font-medium text-[#6A6A6A]">{subtitle}</span>
         </div>
       </div>
