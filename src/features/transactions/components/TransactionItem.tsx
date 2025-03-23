@@ -16,7 +16,8 @@ const TransactionItem = ({
   return (
     <div
       className={clsx(
-        'flex w-full p-3 relative rounded-xl gap-3 border border-[#E8E8E8] shadow-[0_2px_6px_rgba(0,0,0,0.03)] items-center '
+        'flex w-full p-3 relative rounded-xl gap-3 border border-[#E8E8E8] shadow-[0_2px_6px_rgba(0,0,0,0.03)] items-center ',
+        'cursor-pointer transition-transform duration-300 ease-in-out hover:scale-[0.98]'
       )}
     >
       <div
