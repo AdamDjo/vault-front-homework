@@ -1,3 +1,5 @@
+import React from 'react';
+
 const EthereumIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     version="1.1"
@@ -8,6 +10,7 @@ const EthereumIcon = (props: React.SVGProps<SVGSVGElement>) => (
     viewBox="0 0 226.777 226.777"
     enableBackground="new 0 0 226.777 226.777"
     xmlSpace="preserve"
+    {...props}
   >
     <g>
       <polygon

@@ -1,3 +1,4 @@
+import React from 'react';
 import EthereumIcon from '@/shared/icons/EthereumIcon';
 import { CryptoUnit } from '@/types/transaction.types';
 import { Bitcoin, DollarSign } from 'lucide-react';
@@ -7,6 +8,7 @@ const ICONS_MAP: Record<CryptoUnit, React.ElementType> = {
   ETH: EthereumIcon,
   SOL: DollarSign,
   XRP: DollarSign,
+  XTZ: DollarSign,
   DEFAULT: Bitcoin,
 };
 

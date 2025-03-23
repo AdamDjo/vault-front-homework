@@ -1,5 +1,4 @@
 import { TransactionUIProps } from '@/features/transactions/types/TransactionUI.types';
-import Card from '@/shared/ui/Card';
 import clsx from 'clsx';
 
 type Props = TransactionUIProps;

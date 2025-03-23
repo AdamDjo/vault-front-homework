@@ -23,5 +23,14 @@
 - [x] fix design errors
 - [x] fix responsive
 - [x] Add images
-- [ ] Add jest & configuration
-- [ ] Add some unit tests
+- [x] Add jest & configuration
+- [x] Add some unit tests
+- [x] Fix linter errors
+- [x] Deploy website v1
+- [ ] Add XTZ XRP Solana
+- [ ] Add TransactionDetailPage
+- [ ] Add global theme
+- [ ] Add darkMode
+- [ ] Add i18n & translation
+- [ ] Cover 72% unit tests
+- [ ] Add end to end and snapshot tests

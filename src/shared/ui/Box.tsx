@@ -1,3 +1,4 @@
+import React from 'react';
 type BoxProps = {
   children: React.ReactNode;
   className?: string;

@@ -23,6 +23,13 @@ export default [
         fetch: 'readonly',
         console: 'readonly',
         navigator: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        jest: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
       },
     },
     plugins: {
