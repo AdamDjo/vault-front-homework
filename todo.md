@@ -21,7 +21,7 @@
 - [x] add not found section
 - [x] add big container
 - [x] fix design errors
-- [ ] fix responsive
-- [ ] Add images
-
-- [ ] Add unit tests
+- [x] fix responsive
+- [x] Add images
+- [ ] Add jest & configuration
+- [ ] Add some unit tests

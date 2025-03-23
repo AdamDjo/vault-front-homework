@@ -2,9 +2,10 @@ import { CryptoUnit } from '@/types/transaction.types';
 
 const GRADIENTS: Record<CryptoUnit, { from: string; to: string }> = {
   BTC: { from: '#F7931A', to: '#F7931A' },
-  ETH: { from: '#627EEA', to: '#627EEA' },
+  ETH: { from: '#454A75', to: '#454A75' },
   SOL: { from: '#9945FF', to: '#14F195' },
   XRP: { from: '#00AAE4', to: '#00AAE4' },
+  XTZ: { from: '#9945FF', to: '#14F195' },
   DEFAULT: { from: '#F7931A', to: '#F7931A' },
 };
 
